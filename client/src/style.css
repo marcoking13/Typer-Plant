@@ -1,0 +1,23 @@
+@keyframes upDown {
+  0%{
+    bottom:-10px;
+  }
+  50%{
+    bottom:5px;
+  }
+  100%{
+    bottom:-10px
+  }
+}
+.ufo{
+  animation: upDown 3s infinite ease-in-out;
+  position:relative;
+}
+.startButton:hover{
+  background:black !important;
+  font-weight:bold;
+  color:#40ff00 !important;
+}
+.ship{
+    animation: upDown 4s infinite ease-in-out;
+}
