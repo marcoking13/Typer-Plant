@@ -7,14 +7,13 @@ import Enemies from "./enemy_component";
 class Game extends React.Component{
 
   constructor(props){
-
     super(props);
     var currentWords =[];
     var ll = [];
-    var counter = Math.floor(Math.random() * 3)+1;
+
     var ran =  Math.floor(Math.random() * Words.length);
     var keys = [];
-    for(var i =0; i <= counter; i++){
+    for(var i =0; i < 3; i++){
       currentWords.push(Words[ran]);
       ran ++;
     }
@@ -31,14 +30,15 @@ class Game extends React.Component{
       random: ran,
       corrects:0,
       flagger:true,
+      flag:false,
       keys:[],
       counter: 0,
       letterCounter: 0,
       lives:3,
       blown:0,
-      timer:10000,
       currentWords:currentWords
     }
+    console.log(this.state.timer);
 
     this.changeState = this.changeState.bind(this);
 
@@ -66,16 +66,31 @@ class Game extends React.Component{
 
     this.setState(
       {
-        counter:this.state.counter +counter,
+        counter:this.state.counter + counter,
         keys:[],
-        blown:this.state.blown +counter
+        blown:this.state.blown + counter
       }
   );
 
     }
   }
-
   componentDidMount(){
+    var sec = 10;
+      var time = sec;
+      this.myInterval = setInterval(()=>{
+        time --;
+        console.log(time);
+        if(time == 0){
+
+          console.log("times up");
+          time = sec;
+          this.setState({lives:this.state.lives - 1,blown:this.state.blown +  1 });
+        }
+        if(this.state.lives ==  0 ){
+          alert("You Lost");
+          window.location.assign("/");
+        }
+      },1000);
 
     document.addEventListener("keydown",(event)=>{
 
@@ -139,10 +154,12 @@ renderWorder(){
     );
 
   }
+
   renderEnemies(){
 
     return(
       <Enemies
+
         counter = {this.state.currentWords.length}
         timer = {this.state.timer}
         blown = {this.state.blown}/>
@@ -152,7 +169,7 @@ renderWorder(){
   render(){
     return(
       <div
-      className="gameBackground"style={{background:"url('images/manor.jpg')"}}>
+        className="gameBackground"style={{background:"url('images/manor.jpg')"}}>
         <div className="wordBackground">
 
           {this.renderWorder()}

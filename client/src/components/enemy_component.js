@@ -3,9 +3,11 @@ import React from "react";
 
 class Enemies extends React.Component {
 
+
   renderUFO(){
     var arr =[];
     var c = 1;
+
     for(var i = 0; i<this.props.counter - this.props.blown; i++){
       arr.push(<img src ={`images/ufo2.gif`} className={"eUFO ufo"+c}/>);
       c++;

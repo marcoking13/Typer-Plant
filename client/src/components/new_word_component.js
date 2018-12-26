@@ -31,8 +31,10 @@ class Worder extends React.Component {
 
     if(this.props.counter >= this.props.words.length){
 
-      return <h1 className="mm"> Level Up </h1>
 
+        alert("You Won");
+        window.location.assign("/");
+      
     }
     return(
       <div>

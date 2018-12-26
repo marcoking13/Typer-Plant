@@ -32,16 +32,24 @@
     opacity:0
   }
 }
-.ufo1{
+.ufo4{
   top:120px;
+  animation: sampleMove 1 ease-in 25s;
   right:50px;
 }
-.ufo3{
+.ufo2{
   bottom:130px;
+  animation: sampleMove 1 ease-in 20s;
   right:40px;
 }
-.ufo2{
+.ufo3{
   top:80px;
+  animation: sampleMove 1 ease-in 10s;
+  right:100px;
+}
+.ufo1{
+  top:80px;
+  animation: sampleMove 1 ease-in 30s;
   right:100px;
 }
 .hearts{
@@ -104,7 +112,7 @@
   }
 }
 .eUFO{
-  animation: sampleMove 1 ease-in 10s;
+
   top:180px;
   left:300px;
   float:left;
