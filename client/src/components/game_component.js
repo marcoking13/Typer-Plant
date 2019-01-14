@@ -6,7 +6,7 @@ import Enemies from "./enemy_component";
 import Lives from "./lives_component.js";
 import End from "./end_component";
 import Timer from "./time_component.js";
-import GameSystem2 from "./paragraph_component.js";
+import GameSystem2 from "./sun_component.js";
 // Global Vars
 var sec;
 var flag = true;
@@ -198,7 +198,7 @@ class Game extends React.Component{
             <div
               className="gameBackground"style={{background:"url('images/manor.jpg')"}}>
                 {this.renderAudio()}
-                <Timer time = {this.state.time} />
+                <Timer time = {10} />
                 <div className="wordBackground">
                     <End  returnMap = {this.props.returnMap}lives = {this.state.lives} ufo = {this.props.ufo} planet = {this.props.image}  />
                 </div>
@@ -216,7 +216,7 @@ class Game extends React.Component{
         </div>
         <br />
         <br />
-        <Timer time = {this.state.time} />
+        <Timer time = {10} />
         <br />
         <div className="heroSide fl s">
             <div className="liveContainer">

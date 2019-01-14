@@ -1,43 +1,40 @@
 import React from "react";
-import Paragraph from "./../data/paragraph1";
-class GameSystem2 extends React.Component {
 
+class ParagraphComponent extends React.Component{
   constructor(props){
     super(props);
-    var slicedWords = [];
-    var currentWords = [];
-    console.log(Paragraph);
-    for(var i =0; i < Paragraph.length; i++){
-      currentWords.push(Paragraph[i]);
-    }
-    currentWords.map((word)=>{
-      let arr = [...word];
-        slicedWords.push(arr);
-    });
-    this.state = {
-      paragraphs:slicedWords
-    }
-    console.log(this.state.paragraphs);
+
   }
-  renderWords(){
-    return this.state.paragraphs[0].map((paragraph)=>{
+  
+  renderParagraph(){
+    var c =0;
+    var answer=[];
+    console.log(this.props.keys)
+     this.props.paragraph.map((paragraph)=>{
+
       if(paragraph == " "){
-        return <div className="space"style={{width:"20px",height:"10px",float:"left"}} />
+        answer.push( <div key = {c +paragraph}className="space"style={{width:"5px",height:"5px",float:"left"}} />);
+      }else if (paragraph == " " && this.props.keys[c] == paragraph){
+       answer.push(<div style={{float:"left",width:"5px",height:"5px"}}> </div>)
+    }
+    if(this.props.keys[c] == paragraph){
+
+      answer.push( <p  style={{color:"orange",float:"left",fontFamily:"Roboto"}} className={paragraph + "  "}  _id="jk" key = {paragraph + c}>{paragraph}</p>)
+    }else{
+      answer.push( <p  style={{color:"grey",float:"left",fontFamily:"Roboto"}} className={paragraph + "  "} _id="jk" key = {paragraph + c}>{paragraph}</p>)
       }
-      return <p className='paraText'style={{color:"white",float:"left",marginLeft:"5px"}}>{paragraph}</p>
+      c++;
     });
+    return answer;
   }
   render(){
     return (
-      <div className="container-fluid">
-        <div className="paragraphBox" style={{position:"absolute",top:"2%",left:"25%",width:"50%",height:"500px",background:"transparent"}}>
-
-          {this.renderWords()}
-        </div>
-
+      <div>
+        {this.renderParagraph()}
       </div>
     )
   }
 }
 
-export default GameSystem2;
+
+ export default ParagraphComponent;

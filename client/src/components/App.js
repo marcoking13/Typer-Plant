@@ -6,12 +6,12 @@ import Words3 from "./../data/words3.js";
 import Words4 from "./../data/words4.js";
 import Words5 from "./../data/words5.js";
 import Words6 from "./../data/words6.js";
-import GameSystem2 from "./paragraph_component.js";
 import "./../style.css";
 import Timer from "./time_component.js";
 import Starting from "./starting_component.js";
 import Game from "./game_component.js";
 import Map from "./map_component.js";
+import Game2 from "./sun_component.js";
 import Paragraph1 from "./../data/paragraph1.js";
 class App extends Component {
 
@@ -82,6 +82,9 @@ console.log(this.parseString(this.state.ufo))
     }
     if(this.state.level == 5){
       return  <div> <Game length={3} game="meteor"returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words6} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
+    }
+    if(this.state.level == 6){
+      return  <div style={{background:"url('images/manor.jpg')"}}> <Game2 length={1} game="meteor" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Paragraph1} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
     }
 
 

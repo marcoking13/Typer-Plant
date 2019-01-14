@@ -9,6 +9,24 @@
     bottom:-20px
   }
 }
+@keyframes shooting{
+  0%{
+    top:0%;
+    right:90%;
+  }
+  100%{
+    top:55%;
+    right:5%;
+  }
+}
+.meteorL{
+  animation: shooting 90s 1 ease-in;
+  width:300px;
+  position:absolute;
+  top:0%;
+  right:90%;
+  height:300px;
+}
 .red{
   color:red !important;
 }
@@ -124,6 +142,25 @@
   }
 
 }
+@keyframes sun{
+  0%{
+    background:orange;
+
+    transform:rotate(0deg)
+
+  }
+  30%{
+    background:yellow;
+
+
+  }
+  100%{
+    background:orange;
+    border-color:orange;
+    transform:rotate(360deg);
+  }
+
+}
 
 .energy13d{
   animation:energy33 1s ease-in 1;
@@ -147,6 +184,7 @@
 .blues{
   background:blue;
   animation:blues 5s infinite ease-in-out;
+  border:4px solid purple;
 }
 .lostClass{
   text-align:center;color:red;font-size:60px;margin-top:5%;
@@ -154,8 +192,22 @@
 .mapTitle{
   font-size:35px;color:green;text-align:center;font-family:"Roboto";
 }
+.sun{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:70px solid orange;
+
+  position:absolute;
+  top:55%;
+  right:0%;
+animation:sun infinite ease-in 70s;
+}
 .timer{
   float:right;color:red;margin-right:5%;font-size:50px;font-family:"Roboto";position:absolute;right:10%;top:5%
+}
+body{
+  background:url('images/manor.jpg')
 }
 .buttonClasser{
   margin-top:5%;margin-left:25%;width:50%;background:purple;color:white;text-align:center;
@@ -274,6 +326,13 @@
   position:relative;
   top:30px;
   float:left;
+}
+.planet6{
+  position:absolute;
+  top:2.5%;
+  left:25%;
+  width:600px;
+  height:600px;
 }
 .hC{
   width:10%;float:left;margin-left:1%;
@@ -430,6 +489,11 @@ html{
 .greens{
   border-radius:60%;width:40px;height:25px;margin-left:52.5%;
   background:grey !important;
+}
+.sunB{
+  border-radius:60%;width:40px;height:25px;margin-left:52.5%;
+  background:orange !important;
+  border:5px solid yellow;
 }
 .startover{
   width:50%;

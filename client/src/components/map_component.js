@@ -77,11 +77,24 @@ class Map extends React.Component{
                     animationG:"g3832ll49"
 
 
+                  },
+                  {
+                    lives:1,
+                    ufo:" ",
+                    attackE: " ",
+                    attackG:" ",
+                    animationE:" ",
+                    animationG:" ",
+
+
+
                   }
                 ];
             var classer = "level blues";
           for(var k = 1; k < data.length - 1; k++){
-
+              if(data.length - 2 === k){
+                var classer = "level sunB";
+              }
             html.push(
               <div className={"col-4 planetContainer planet"+k+ " "+k} id = {k} onClick = {(e)=>{
                 document.querySelector("#com3").play();
