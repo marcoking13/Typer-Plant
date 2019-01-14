@@ -1,15 +1,31 @@
 @keyframes upDown {
   0%{
-    bottom:-10px;
+    bottom:-20px;
   }
   50%{
     bottom:5px;
   }
   100%{
-    bottom:-10px
+    bottom:-20px
   }
 }
-
+.red{
+  color:red !important;
+}
+.oo{
+  opacity:0 !important;
+  color:black;
+}
+.good{
+  color:green;
+  animation:ghost2 1s 1 ease-out;
+  font-size: 80px;
+  opacity:1;
+  position:absolute;
+  top:25%;
+  left:-20%;
+  font-family: monospace;
+}
 @keyframes ghost {
   0%{
     opacity:0;
@@ -32,6 +48,133 @@
     opacity:0
   }
 }
+.planetContainer{
+  float:left;
+  width:20%;
+}
+.locked{
+  opacity:.6;
+
+}
+.grey{
+  background:grey;
+}
+.planet1{
+  position:absolute;
+  top:30%;
+  left:5%;
+}
+.planet6{
+  position:absolute;
+  top:2%;
+  left:35%;
+
+}
+@keyframes blues {
+  0%{
+    background:blue;
+  }
+  50%{
+    background:#8080ff;
+  }
+  100%{
+    background:blue;
+  }
+}
+.planet2{
+  margin-top:15%
+}
+.planet3{
+  margin-top:20%;
+}
+.h2{
+  font-size:50px;
+}
+.planet4{
+  margin-top:30%;
+  margin-left:15%;
+}
+.planet5{
+  margin-top:3%;
+  margin-right:2%;
+}
+@keyframes energy33{
+  0%{
+    width:300px;
+    transform:rotate(0deg);
+  }
+  20%{
+    width:400px;
+
+    transform:rotate(360deg);
+    left:-600px;
+  }
+
+}
+@keyframes energy334{
+  0%{
+    width:30px;
+
+  }
+  80%{
+    width:1200px;
+  }
+  100%{
+    opacity:0;
+  }
+
+}
+
+.energy13d{
+  animation:energy33 1s ease-in 1;
+  opacity:1;
+  position:relative;
+  left:-600px;
+  top:200px;
+  width:300px;
+  height:300px;
+}
+.energykk13d{
+  animation:energy334 1s ease-in 1;
+  opacity:1;
+  position:absolute;
+  top:40%;
+  right:20%;
+  width:30px;
+
+  height:50px;
+}
+.blues{
+  background:blue;
+  animation:blues 5s infinite ease-in-out;
+}
+.lostClass{
+  text-align:center;color:red;font-size:60px;margin-top:5%;
+}
+.mapTitle{
+  font-size:35px;color:green;text-align:center;font-family:"Roboto";
+}
+.timer{
+  float:right;color:red;margin-right:5%;font-size:50px;font-family:"Roboto";position:absolute;right:10%;top:5%
+}
+.buttonClasser{
+  margin-top:5%;margin-left:25%;width:50%;background:purple;color:white;text-align:center;
+}
+.fr{
+  float:right;
+}
+.fl{
+  float:left;
+}
+.level{
+  border-radius:60%;width:40px;height:25px;margin-left:52.5%;
+}
+.planet1{
+  margin-top:15%;
+}
+.planets{
+  width:55%;margin-left:45%;opacity:1 !important;
+}
 .ufo4{
   top:120px;
   animation: sampleMove 1 ease-in 25s;
@@ -53,7 +196,7 @@
   right:100px;
 }
 .hearts{
-  width:55px;height:55px;
+  width:100%;float:left;margin-bottom:5%;
 }
 .gameBackground{
   background:url('./../images/manor.jpg');padding-bottom:50%
@@ -71,19 +214,66 @@
   width:50%;margin-left:25%;margin-top:10%
 }
 .startButton{
-  width:"50%";margin-left:"25%";background:transparent;height:50px;border-radius:10px;border:4px solid green;text-align:center;color:green;font-family:"Roboto";font-size:30px
+  width:50%;margin-left:25%;background:transparent;height:50px;border-radius:10px;border:4px solid green;text-align:center;color:green;font-family:"Roboto";font-size:30px
 }
 .s{
   width:50%;margin-top:5%;
 }
 .liveContainer{
-  float:left;margin-left:5%;width:90%;margin-top:;25%
+  float:left;margin-left:17.5%;width:50%;margin-top:5%;margin-bottom:5%;
 }
 .ship{
-  width:205px;height:205px;float:left;margin-left:5%
+  width:405px;height:405px;float:left;margin-left:10%; animation:infinite roat 10s ease-in-out;
+}
+.ufoEImage{
+  position:relative;
+
+  animation: 2s upDown infinite ease-in-out ;
 }
 .wordBackground{
   position:absolute;top:.1%;width:50%;left:44%;right:5%;
+}
+
+.rotate{
+  transform: rotate(360deg);
+  transition:infinite ease-in transform 5s;
+
+}
+@keyframes attack {
+  0%{
+    left:300px;
+    top:200px;
+    opacity:1;
+  }
+  100%{
+    left:-700px;
+    opacity:1;
+  }
+}
+.energy13dkj{
+  position:relative;
+  animation: 1s attack 1 ease-in;
+  width:300px;
+  opacity:1;
+  top:200px;
+  left:-700px;
+  height:100px;
+}
+.hCE{
+
+  position:absolute;
+  top:20%;
+  right:1%;
+
+  width:15%;
+  float:right;
+}
+.hearts2{
+  width:35px;
+  height:35px;
+  position:relative;
+  top:30px;
+  float:left;
 }
 .hC{
   width:10%;float:left;margin-left:1%;
@@ -92,7 +282,7 @@
   position:relative;width:100px !important;height:100px !important;
 }
 .h2{
-  float:left;font-family:"Roboto";font-size:"45px";
+  float:left;font-family:"Roboto";font-size:35px;margin-right:10px;
 }
 .mm{
   text-align:center;color:green;font-family:"Roboto";
@@ -124,8 +314,10 @@
   text-align: left;
 }
 .ufo{
-  animation: upDown 3s infinite ease-in-out;
+
   position:relative;
+  transform: rotate(360deg);
+  transition:infinite ease-in transform 5s;
   width:50%;
   margin-left:25%
 }
@@ -169,6 +361,8 @@ html{
   border:4px solid green;
   text-align:center;
   color:green;
+  position:relative;
+  bottom:60px;
   font-family:"Roboto";
   font-size:30px;
 }
@@ -193,13 +387,82 @@ html{
 
 .wrong{
   color:red;
-  animation:ghost2 1s 1 ease-out;
-  font-size: 80px;
-  opacity:0;
+
+}
+.endT{
+  text-align: center;
   position:absolute;
-  top:25%;
-  left:-20%;
-  font-family: monospace;
+  padding-bottom:10%;
+  font-weight:bold;
+  margin-bottom:10%;
+  font-family:monospace;
+  top:5%;
+  color:gold;
+}
+.goodd{
+  color:green;
+}
+.planetW{
+  width:30%;
+  margin-left:-5%;
+  position:relative;
+  bottom:50px;
+
+}
+.planetWm{
+  width:30%;
+
+  margin-left:-2%;
+  position:relative;
+  bottom:50px;
+}
+.blackB{
+  background:black;
+}
+.destruction{
+  position:absolute;
+  top:30%;
+  left:-10%;
+
+  width:300px;
+
+}
+.greens{
+  border-radius:60%;width:40px;height:25px;margin-left:52.5%;
+  background:grey !important;
+}
+.startover{
+  width:50%;
+  position:absolute;
+  left:-12%;
+  top:95%;
+  border-radius:10px;
+  color:purple;
+  height:50px;
+  border:2px solid purple;
+  background:black;
+  font-weight: bold;
+  font-size:25px;
+  font-family:monospace;
+  margin-top:20px;
+}
+.endT{
+  text-align:left;
+  position:relative;
+  right:90px;
+  color:orange;
+  margin-top:10%;
+  font-family: "Goudy Bookletter 1911", sans-serif;
+}
+.comment{
+    position:absolute;
+    opacity:1;
+    top:5%;
+    left:37.5%;
+    animation:ghost2 1s 1 ease-out;
+    font-size: 80px;
+    font-family: monospace;
+
 }
 @keyframes sampleMove{
   0%{
@@ -209,10 +472,169 @@ html{
     left:-500px
   }
 }
+.blues{
+  animation:5s infinite ease-in-out blues;
+}
 .ex{
     animation: ex 10s ease-out 1;
     opacity:0 !important;
     position:relative;
     width:100px !important;
     height:100px !important;
+}
+@keyframes roat {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+.level:hover{
+  background:blue;
+  border:5px solid groove red !important;
+}
+.lol{
+  width:50px;
+  height:50px;
+  position:absolute;
+}
+
+.pla1{
+  top:5%;
+  right:5%;
+
+}
+.pla4{
+  top:70%;
+  right:10%;
+
+}
+.lol:hover{
+  animation: roat 3s infinite ease-in-out;
+}
+
+@keyframes enlarge{
+0%{
+  width:50px;
+  height:50px;
+
+
+}
+50%{
+  width:60px;
+  height:60px;
+
+}
+100%{
+  width:50px;
+  height:50px;
+}
+}
+.pla2{
+  top:30%;
+  right:70%;
+
+}
+.pla3{
+  top:9%;
+  right:80%;
+
+}
+.rotate{
+
+  position:relative;
+  animation: roat infinite 50s ease-in;
+
+  width:40%;
+  margin-left:30%
+}
+
+@keyframes planetAttack1{
+  0%{
+    left:200px;
+  }
+  90%{
+    left:800px;
+
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes planetAttack2{
+  0%{
+    left:200px;
+    opacity:1
+  }
+  90%{
+    left:1700px;
+    transform:rotate(360deg);
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+
+.g383249{
+
+  width:200px;
+  height:200px;
+  left:1250px;
+  top:32%;
+  position:absolute;
+
+}
+
+
+.g383kmk249{
+  animation: planetAttack1 1 1.1s ease-in;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  position:absolute;
+
+}
+.g3832ll49{
+  animation: planetAttack2 1 1.1s ease-in;
+  width:200px;
+  height:200px;
+  top:38%;
+  left:200px;
+  opacity:0;
+  position:absolute;
+
+}
+.g3832d49{
+  animation: planetAttack3 1 1.1s ease-in;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  position:absolute;
+
+}
+
+.g38392dddddd49{
+  animation: planetAttack3 1 1.1s ease-in;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  position:absolute;
+
+}
+
+.g3m8324sw9{
+  animation: planetAttack4 1 1.1s ease-in;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  position:absolute;
+
+}
+.ship{
+  animation: 30s infinite ease-in roat !important;
 }
