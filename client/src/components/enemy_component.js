@@ -1,6 +1,6 @@
 import React from "react";
 import UFO from "./ufo_component.js";
-var time;
+
 class Enemies extends React.Component {
   constructor(props){
     super(props);
@@ -13,7 +13,7 @@ class Enemies extends React.Component {
     var c = 1;
 
     for(var i = 0; i<this.props.counter - this.props.blown; i++){
-      arr.push(<img src ={`images/ufo2.gif`} className={"eUFO ufo"+c}/>);
+      arr.push(<img alt = 'k' src ={`images/ufo2.gif`} className={"eUFO ufo"+c}/>);
       c++;
     }
     for(var i = 0; i<this.props.blown; i++){
@@ -39,7 +39,7 @@ renderLives(){
   for (var i =0; i<= this.props.wordCount - 1; i++){
     lives.push(
       <div key = {i}>
-        <img className="hearts2 "src="images/heart2.png"/>
+        <img alt = 'k' className="hearts2 "src="images/heart2.png"/>
       </div>
     );
   }
@@ -52,6 +52,7 @@ renderLives(){
       var parent = document.querySelector(".eContain");
       var animation = this.props.attackE;
       attack.setAttribute("src",animation);
+          attack.setAttribute("alt","l");
       attack.classList.add("energy");
       attack.classList.add(this.props.animationE);
       parent.appendChild(attack);

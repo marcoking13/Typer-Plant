@@ -91,25 +91,25 @@ class Map extends React.Component{
                   }
                 ];
             var classer = "level blues";
-          for(var k = 1; k < data.length - 1; k++){
-              if(data.length - 2 === k){
-                var classer = "level sunB";
-              }
-            html.push(
-              <div className={"col-4 planetContainer planet"+k+ " "+k} id = {k} onClick = {(e)=>{
-                document.querySelector("#com3").play();
-                this.props.chooseLevel(
-                data[e.target.attributes.id.value].animationE,
-                data[e.target.attributes.id.value].animationG,
-                data[e.target.attributes.id.value].attackE,
-                data[e.target.attributes.id.value].attackG,
+            for(var k = 1; k < data.length - 1; k++){
+                if(data.length - 2 === k){
+                  classer = "level sunB";
+                }
+              html.push(
+                <div className={"col-4 planetContainer planet"+k+ " "+k} id = {k} onClick = {(e)=>{
+                  document.querySelector("#com3").play();
+                  this.props.chooseLevel(
+                    data[e.target.attributes.id.value].animationE,
+                    data[e.target.attributes.id.value].animationG,
+                    data[e.target.attributes.id.value].attackE,
+                    data[e.target.attributes.id.value].attackG,
 
-                data[e.target.attributes.id.value].lives,
-                e.target.attributes.id.value,
-                "./../images/planet"+e.target.attributes.id.value+".png",
-                data[e.target.attributes.id.value].ufo)}}>
-                  <img className="planets locked " id = {k} src={"./../images/planet"+k+".png"}/>
-                  <div className={classer}  id = {k}></div>
+                    data[e.target.attributes.id.value].lives,
+                    e.target.attributes.id.value,
+                    "./../images/planet"+e.target.attributes.id.value+".png",
+                    data[e.target.attributes.id.value].ufo)}}>
+                <img alt ="l" className="planets locked " id = {k} src={"./../images/planet"+k+".png"}/>
+                <div className={classer}  id = {k}></div>
               </div>
           );
 
@@ -123,15 +123,17 @@ class Map extends React.Component{
 
       <div>
         <audio id="com2" autoPlay>
-          <source type="audio/mp3" src="images/orbit.mp3"/>
+          <source type="audio/mp3" src="images/orbit2.mp3"/>
         </audio>
         <audio id="com3">
           <source type="audio/wav" src="images/teleport.wav"/>
         </audio>
 
       <div style={{background:"url('images/manor.jpg')"}} className="gameBackground">
+      <div className="planeter">
 
         {this.renderPlanets()}
+        </div>
       </div>
       </div>
     )

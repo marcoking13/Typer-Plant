@@ -103,7 +103,8 @@
   margin-top:15%
 }
 .planet3{
-  margin-top:20%;
+  margin-top:25%;
+
 }
 .h2{
   font-size:50px;
@@ -331,8 +332,8 @@ body{
   position:absolute;
   top:2.5%;
   left:25%;
-  width:600px;
-  height:600px;
+  width:400px;
+  height:400px;
 }
 .hC{
   width:10%;float:left;margin-left:1%;
@@ -702,3 +703,234 @@ html{
 .ship{
   animation: 30s infinite ease-in roat !important;
 }
+
+
+.ufoEImage{
+  width:300px;
+
+
+  height:300px;
+}
+@media only screen and (max-width: 800px) {
+  .startButton{
+    width:100%;
+position:relative;
+right:20%;
+    margin-top:50%;
+  }
+  .title{
+    font-size: 30px;
+    margin-top:20%;
+    padding-bottom:10%;
+  }
+  .pla3{
+    margin-top:10%;
+
+  }
+  .hCE{
+    width:80px;
+    margin-left:2.5%;
+    padding-left: 20px;
+
+
+  }
+  body{
+    overflow-y: hidden;
+  }
+  .energy{
+    width:30px;
+    height:30px;
+
+    position: relative;
+  }
+  .hearts2{
+    width:25px;
+    height:25px;
+  }
+
+  .active{
+    font-size: 20px;
+  }
+  .timer{
+    margin-right: 30%;
+  }
+  .ufoEImage{
+    width:80px;
+      position: relative;
+      top:150px;  
+    height:80px;
+  }
+  .gameBackground{
+    height:600px;
+  }
+  .comment{
+    margin-right:10%;
+        margin-left:5%;
+    font-size: 16px;
+  }
+  .goodd{
+    margin-right:10%;
+        margin-left:5%;
+    font-size: 16px;
+  }
+  .wrong{
+    margin-left:5%;
+    font-size: 21px;
+        margin-left:5%;
+  }
+  .liveContainer{
+    position: relative;
+    top:150px;
+  }
+  .planet6{
+    opacity:0;
+
+  }
+  .resizeAttack{
+    width:100px;
+    height:100px;
+  }
+  .ship{
+      top:150px;
+    width:100px;
+    position: relative;
+    height:100px;
+
+  }
+  .planetContainer{
+    width:20%;
+
+
+  }
+
+  .planet3{
+
+    position: absolute;
+    left:25%;
+    top:5%;
+
+  }
+  .planet2{
+
+    position: absolute;
+    left:70%;
+    top:20%;
+
+  }
+  .planet1{
+
+    position: absolute;
+    left:9%;
+    top:20%;
+
+  }
+  .planet4{
+
+    position: absolute;
+    left:12%;
+    top:2%;
+    margin-top:10%;
+
+  }
+  .planet6{
+
+    position: absolute;
+    left:50%;
+    top:5%;
+
+  }
+  .planet4{
+
+    position: absolute;
+    left:25%;
+    top:10%;
+
+  }
+  .planets{
+    margin-left:10%;
+    padding:60px;
+    margin-top:5%;
+
+   }
+  .levels{
+        margin-left:10%;
+
+  }
+
+  .pla1{
+    margin-top:10%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gameBackground{
+  padding-bottom: 1000px;
+}
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1000px){
+  .ship{
+    width:200px;
+    height:200px;
+    top:70px;
+    position: relative;
+
+
+  }
+  .gameBackground{
+    height:1000px;
+  }
+  .planeter{
+    position: relative;
+    top:90px;
+  }
+  .ufoEImage{
+    width:140px;
+    height:140px;
+    position: relative;
+
+top:50px;
+  left:80px;
+  }
+  .planet6{
+    opacity: 0;
+    width:0px;
+    height:0px;
+  }
+
+  .hCE{
+    position: relative;
+    width:200px;
+    top:70px;
+    right:50px;
+  }
+  .active{
+    position: relative;
+    left:30px;
+  }
+  .liveContainer{
+    top:70px;
+    position: relative;
+left:20px;
+  }
+  .hearts2{
+    width:20px;
+    margin-right:10px;
+    margin-bottom:5px;
+    height:20px;
+  }
+    }

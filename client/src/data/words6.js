@@ -6,5 +6,17 @@ export default
     "LAND OWNER",
     "REASONS",
     "RUNNING AWAY",
-    "POKEMON GO"
+    "POKEMON GO",
+    "PERSIA",
+    "COOL CATS",
+    "LAND MINE",
+    "FIGHTER JETS",
+    "UNITED KINGDOM",
+    "TWO GROUNDHOGS",
+    "THE SOLAR SYSTEM",
+    "MEWTWO",
+    "PLAY A SONG",
+    "IT IS VERY SUNNY OUTSIDE",
+    "CHASE AFTER HIM",
+    "CHARIZARD"
   ]

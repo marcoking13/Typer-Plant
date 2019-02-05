@@ -52,12 +52,13 @@ constructor(props){
 
    chooseLevel(animationE,animationG,eA,gA,lives,level,image,ufo){
      console.log(level,ufo);
-setTimeout(()=>{
+     setTimeout(()=>{
+       console.log(animationE,animationG,eA,gA,lives,level,image,ufo);
      this.setState({animationE:animationE,animationG:animationG,ufoAttack:eA,heroAttack:gA,flag:true,level:level,planetImage:image,lives:lives,ufo:ufo,animationE:animationE,animationG:animationG});
    },500);
    }
    returnMap(){
-     window.location.assign("/");
+
      this.setState({level:null,start:true});
 
    }
@@ -66,25 +67,25 @@ setTimeout(()=>{
      return string.split('.gif4').join('.gif');
    }
   render() {
-console.log(this.parseString(this.state.ufo))
+    console.log(this.parseString(this.state.ufo))
     if(this.state.level == 1){
       console.log(this.state.ufo,"KKKK");
-      return  <div> <Game length={5} game="ufo" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship = {this.state.ufo} lives = {this.state.lives} image={this.state.planetImage} onLose = {this.onLose} words = {Words} time = {this.state.time} ufo = {this.state.ufo + 3}/></div>
+      return  <div> <Game length={10} game="ufo" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship = {this.state.ufo} lives = {this.state.lives} image={this.state.planetImage} onLose = {this.onLose} words = {Words} time = {this.state.time} ufo = {this.state.ufo + 3}/></div>
     }
     if(this.state.level == 2){
-      return  <div> <Game  length={4} game="ufo"  returnMap = {this.returnMap}  animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack}  spaceship = {this.state.ufo} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words2} time = {this.state.time} ufo ={this.state.ufo + 3}/></div>
+      return  <div> <Game   length={6} game="ufo"  returnMap = {this.returnMap}  animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack}  spaceship = {this.state.ufo} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words2} time = {this.state.time} ufo ={this.state.ufo + 3}/></div>
     }
     if(this.state.level == 3){
-      return  <div> <Game length={6}  game="ufo"returnMap = {this.returnMap}  animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack}  spaceship = {this.state.ufo} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words3} time = {this.state.time} ufo = {this.state.ufo + 3}/></div>
+      return  <div> <Game  length={8}  game="ufo"returnMap = {this.returnMap}  animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack}  spaceship = {this.state.ufo} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words3} time = {this.state.time} ufo = {this.state.ufo + 3}/></div>
     }
     if(this.state.level == 4){
-      return  <div> <Game length={3}  game="ufo" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={"images/ship3.gif"} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words4} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
+      return  <div> <Game  length={7}  game="ufo" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={"images/ship3.gif"} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words4} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
     }
     if(this.state.level == 5){
-      return  <div> <Game length={3} game="meteor"returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words6} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
+      return  <div> <Game  length={6} game="meteor"returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Words6} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
     }
     if(this.state.level == 6){
-      return  <div style={{background:"url('images/manor.jpg')"}}> <Game2 length={1} game="meteor" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Paragraph1} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
+      return  <div > <Game2  length={1} game="meteor" returnMap = {this.returnMap} animationE = {this.state.animationE}  animationG = {this.state.animationG} attackE = {this.state.ufoAttack} attackG = {this.state.heroAttack} spaceship ={this.parseString(this.state.ufo)} lives = {this.state.lives}  image={this.state.planetImage} onLose = {this.onLose} words = {Paragraph1} time = {this.state.time} ufo = {this.state.ufo + 4}/></div>
     }
 
 
@@ -100,6 +101,8 @@ console.log(this.parseString(this.state.ufo))
           <Map onLose = {this.onLose} chooseLevel = {this.chooseLevel} />
         </div>
     );
+  }else{
+    return <div />
   }
   }
 

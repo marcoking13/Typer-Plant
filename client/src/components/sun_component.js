@@ -26,7 +26,11 @@ class GameSystem2 extends React.Component {
       status:true
     }
     console.log(this.state.keys);
+    window.addEventListener("keydown",(e)=>{
+        return !(e.keyCode == 32);
+    });
   }
+
   renderComment(flag){
     var comment = document.createElement("h2");
     var parent = document.querySelector("#root");
@@ -52,9 +56,9 @@ class GameSystem2 extends React.Component {
   timeUp(){
     return this.setState({status:false})
   }
-  componentDidMount(){
-
+componentDidMount(){
     document.addEventListener("keydown",(e)=>{
+
       if(this.state.corrects >= this.state.paragraphs[0].length ){
         return this.setState({status:false})
       }
@@ -83,6 +87,9 @@ class GameSystem2 extends React.Component {
     console.log(this.state.keys)
     return (
       <div  style={{background:"url('images/manor.jpg')"}}>
+      <audio id="com2" autoPlay>
+        <source type="audio/mp3" src="images/orbit2.mp3"/>
+      </audio>
         <div className="paragraphBox" style={{border:"1px solid grey",padding:"40px",position:"absolute",top:"2%",left:"20%",width:"50%",height:"500px",background:"transparent"}}>
           <ParagraphComponent paragraph = {this.state.paragraphs[0]} keys = {this.state.keys} />
         </div>

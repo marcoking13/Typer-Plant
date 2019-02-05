@@ -18,9 +18,11 @@ class Game extends React.Component{
     super(props);
     var currentWords =[];
     var slicedWords = [];
+
     var keys = [];
     for(var i =0; i < this.props.length + 1; i++){
-      currentWords.push(this.props.words[i]);
+      var random  = Math.floor(Math.random() * this.props.words.length);
+      currentWords.push(this.props.words[random]);
     }
     currentWords.map((word)=>{
       let arr = [...word];
@@ -34,6 +36,7 @@ class Game extends React.Component{
       corrects:0,
       paragraph:currentWords[0],
       flag:0,
+      ender:false,
       wordCount:currentWords.length,
       keys:[],
       counter: 0,
@@ -43,6 +46,8 @@ class Game extends React.Component{
       currentWords:currentWords
     }
     this.changeState = this.changeState.bind(this);
+    this.timeUp = this.timeUp.bind(this);
+    this.ender = this.ender.bind(this);
     window.onkeydown = function(e) {
       return !(e.keyCode == 32);
     };
@@ -102,6 +107,7 @@ class Game extends React.Component{
     document.querySelector(".attackP").play();
     attack.setAttribute("src",this.props.attackG);
     attack.classList.add(this.props.animationG);
+    attack.classList.add("resizeAttack");
     var parent = document.querySelector(".heroSide");
     parent.appendChild(attack);
 
@@ -128,26 +134,22 @@ class Game extends React.Component{
             comment.parentNode.removeChild(comment);
         },500)
       }
+      ender(){
+        return this.setState({ender: true});
+      }
+      timeUp(){
+        setTimeout(()=>{
+          this.setState({attackE:true,lives:this.state.lives -1});
+        });
+      }
 //----------------------------------------------------------------------
 // Keyboard Functionality
+componentWillMount(){
+  if(this.state.lives === 0){
+    this.setState({ender:true});
+  }
+}
   componentDidMount(){
-     sec = this.props.time;
-      this.myInterval = setInterval(()=>{
-        if(this.state.counter <= this.state.currentWords.length || this.state.lives == 0){
-          sec --;
-      }
-        if(sec == 0){
-          setTimeout(()=>{
-              sec = this.props.time;
-            this.setState({attackE:true,lives:this.state.lives - 1,blown:this.state.blown +  1 });
-          },800);
-
-        }
-        if(this.state.lives ==  0 ){
-              return this.setState({lives:0})
-        }
-
-      },1000);
 
       document.addEventListener("keydown",(event)=>{
 
@@ -162,9 +164,9 @@ class Game extends React.Component{
 
             if(y !== this.state.currentWords[this.state.counter][this.state.letterCounter]){
 
-                setTimeout(()=>{ this.renderComment(false)},500);
+                setTimeout(()=>{ this.renderComment(false)},400);
 
-                return this.setState({keys:[],counter:this.state.counter,letterCounter:0,flag:1,corrects: 0});
+                  return this.setState({keys:[],counter:this.state.counter,letterCounter:0,flag:1,corrects: 0});
             }
           }
         //If everything checks out and the user is correct then excute code below
@@ -192,15 +194,15 @@ class Game extends React.Component{
         </div>
       );
     }
-      if(this.state.counter >= this.state.currentWords.length || this.state.lives == 0 && flag == false){
+      if(this.state.counter >= this.state.currentWords.length || this.state.lives == 0 && this.state.ender === false){
         return (
           <div>
             <div
               className="gameBackground"style={{background:"url('images/manor.jpg')"}}>
                 {this.renderAudio()}
-                <Timer time = {10} />
+
                 <div className="wordBackground">
-                    <End  returnMap = {this.props.returnMap}lives = {this.state.lives} ufo = {this.props.ufo} planet = {this.props.image}  />
+                  <End  returnMap = {this.props.returnMap}lives = {this.state.lives} ufo = {this.props.ufo} planet = {this.props.image}  />
                 </div>
               </div>
             </div>
@@ -210,13 +212,15 @@ class Game extends React.Component{
       <div
         className="gameBackground"style={{background:"url('images/manor.jpg')"}}>
           {this.renderAudio()}
-
+          <audio id="com2" autoPlay>
+            <source type="audio/mp3" src="images/orbit2.mp3"/>
+          </audio>
         <div className="wordBackground"style={{padding:"40px"}}>
           <Worder  words = {this.state.currentWords}  keys = {this.state.keys}  corrects ={this.state.corrects}  letterCounter = {this.state.letterCounter}  flag = {this.state.flag}    wordCounter =  {this.state.currentWords.length}  counter = {this.state.counter}   changeState = {this.changeState}/>
         </div>
         <br />
         <br />
-        <Timer time = {10} />
+        <Timer time = {10} timeUp={this.timeUp} ender={this.ender}/>
         <br />
         <div className="heroSide fl s">
             <div className="liveContainer">

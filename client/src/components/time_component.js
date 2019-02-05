@@ -7,7 +7,7 @@ class Timer extends React.Component{
       time: this.props.time
     }
   }
-
+  
   componentDidMount(){
 
     console.log(this.state.time);
@@ -15,11 +15,9 @@ class Timer extends React.Component{
       if(this.state.time > 0){
         this.setState({time:this.state.time - 1});
     }else{
-      if(this.props.timeUp){
         this.props.timeUp();
-      }else{
-        this.setState({time:10});
-      }
+          this.setState({time:this.props.time});
+
     }
     },1000);
 

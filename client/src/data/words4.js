@@ -7,5 +7,20 @@ export default
     "OPEN THE DOOR",
     "A HAT OF RED",
     "CHASING MY FAVORITE GOOSE",
-    "9+10=19"
+    
+        "I HAVE TRAVELED MANY PLACES",
+        "A GOLD MINE",
+        "RUN AWAY",
+        "A CAT IN THE HAT",
+        "CHARLIES'S CHOCOLATE FACTORY",
+        "THE LORD OF THE RINGS",
+        "PETER PIPER PICKED PEPPERS",
+
+        "WINTER IS COMING",
+        "READ A BOOK",
+        "TWO DOGS ADND ONE GOOSE",
+        "SPIRALS",
+        "NIGHT SKY",
+        "KING OF KINGS",
+        "ACE IN THE HOLE"
   ]

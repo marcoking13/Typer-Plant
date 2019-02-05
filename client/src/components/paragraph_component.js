@@ -1,10 +1,7 @@
 import React from "react";
 
 class ParagraphComponent extends React.Component{
-  constructor(props){
-    super(props);
 
-  }
   
   renderParagraph(){
     var c =0;
@@ -12,12 +9,12 @@ class ParagraphComponent extends React.Component{
     console.log(this.props.keys)
      this.props.paragraph.map((paragraph)=>{
 
-      if(paragraph == " "){
+      if(paragraph === " "){
         answer.push( <div key = {c +paragraph}className="space"style={{width:"5px",height:"5px",float:"left"}} />);
-      }else if (paragraph == " " && this.props.keys[c] == paragraph){
+      }else if (paragraph === " " && this.props.keys[c] === paragraph){
        answer.push(<div style={{float:"left",width:"5px",height:"5px"}}> </div>)
     }
-    if(this.props.keys[c] == paragraph){
+    if(this.props.keys[c] === paragraph){
 
       answer.push( <p  style={{color:"orange",float:"left",fontFamily:"Roboto"}} className={paragraph + "  "}  _id="jk" key = {paragraph + c}>{paragraph}</p>)
     }else{
