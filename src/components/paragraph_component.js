@@ -2,7 +2,7 @@ import React from "react";
 
 class ParagraphComponent extends React.Component{
 
-  
+
   renderParagraph(){
     var c =0;
     var answer=[];
@@ -10,15 +10,15 @@ class ParagraphComponent extends React.Component{
      this.props.paragraph.map((paragraph)=>{
 
       if(paragraph === " "){
-        answer.push( <div key = {c +paragraph}className="space"style={{width:"5px",height:"5px",float:"left"}} />);
+        answer.push( <div key = {c +paragraph}className={"space paraP"} />);
       }else if (paragraph === " " && this.props.keys[c] === paragraph){
-       answer.push(<div style={{float:"left",width:"5px",height:"5px"}}> </div>)
+       answer.push(<div className="space2" > </div>)
     }
     if(this.props.keys[c] === paragraph){
 
-      answer.push( <p  style={{color:"orange",float:"left",fontFamily:"Roboto"}} className={paragraph + "  "}  _id="jk" key = {paragraph + c}>{paragraph}</p>)
+      answer.push( <p  style={{color:"orange",fontFamily:"Roboto",float:"left"}} className={paragraph}  _id="jk" key = {paragraph + c}>{paragraph}</p>)
     }else{
-      answer.push( <p  style={{color:"grey",float:"left",fontFamily:"Roboto"}} className={paragraph + "  "} _id="jk" key = {paragraph + c}>{paragraph}</p>)
+      answer.push( <p  style ={{color:"grey",fontFamily:"Roboto",float:"left"}}className={paragraph} _id="jk" key = {paragraph + c}>{paragraph}</p>)
       }
       c++;
     });

@@ -27,6 +27,9 @@
   right:90%;
   height:300px;
 }
+.paragraphBox{
+  border-color:none !important;
+}
 .red{
   color:red !important;
 }
@@ -249,34 +252,64 @@ body{
   right:100px;
 }
 .hearts{
-  width:100%;float:left;margin-bottom:5%;
+  width:100%;
+  float:left;
+  margin-bottom:5%;
 }
 .gameBackground{
   background:url('./../images/manor.jpg');padding-bottom:50%
 }
 .title{
-  color:red;font-size:50px;font-family:"Monoton";text-align:center;background:black;
+  color:red;
+  font-size:50px;
+  font-family:"Monoton";
+  text-align:center;
+  background:black;
 }
 .ufoBackground{
-  width:50%;margin-left:25%;margin-top:10%;
+  width:50%;
+  margin-left:25%;
+  margin-top:10%;
 }
 .ufo{
-  width:50%;margin-left:25%;
+  width:50%;
+  margin-left:25%;
 }
 .buttonContainer{
-  width:50%;margin-left:25%;margin-top:10%
+  width:50%;
+  margin-left:25%;
+  margin-top:10%
 }
 .startButton{
-  width:50%;margin-left:25%;background:transparent;height:50px;border-radius:10px;border:4px solid green;text-align:center;color:green;font-family:"Roboto";font-size:30px
+  width:50%;
+  margin-left:25%;
+  background:transparent;
+  height:50px;
+  border-radius:10px;
+  border:4px solid green;
+  text-align:center;
+  color:green;
+  font-family:"Roboto";
+  font-size:30px
 }
 .s{
-  width:50%;margin-top:5%;
+  width:50%;
+  margin-top:5%;
 }
 .liveContainer{
-  float:left;margin-left:17.5%;width:50%;margin-top:5%;margin-bottom:5%;
+  float:left;
+  margin-left:17.5%;
+  width:50%;
+  margin-top:5%;
+  margin-bottom:5%;
 }
 .ship{
-  width:405px;height:405px;float:left;margin-left:10%; animation:infinite roat 10s ease-in-out;
+  width:405px;
+  height:405px;
+
+  float:left;
+  margin-left:10%;
+  animation:infinite roat 10s ease-in-out;
 }
 .ufoEImage{
   position:relative;
@@ -284,7 +317,12 @@ body{
   animation: 2s upDown infinite ease-in-out ;
 }
 .wordBackground{
-  position:absolute;top:.1%;width:50%;left:44%;right:5%;
+  position:absolute;
+
+  top:.1%;
+  width:50%;
+  left:44%;
+  right:5%;
 }
 
 .rotate{
@@ -422,7 +460,7 @@ html{
   text-align:center;
   color:green;
   position:relative;
-  bottom:60px;
+  bottom:80px;
   font-family:"Roboto";
   font-size:30px;
 }
@@ -490,6 +528,9 @@ html{
 .greens{
   border-radius:60%;width:40px;height:25px;margin-left:52.5%;
   background:grey !important;
+}
+body{
+  overflow-y: hidden;
 }
 .sunB{
   border-radius:60%;width:40px;height:25px;margin-left:52.5%;
@@ -714,8 +755,8 @@ html{
 @media only screen and (max-width: 800px) {
   .startButton{
     width:100%;
-position:relative;
-right:20%;
+    position:relative;
+    right:20%;
     margin-top:50%;
   }
   .title{
@@ -757,7 +798,7 @@ right:20%;
   .ufoEImage{
     width:80px;
       position: relative;
-      top:150px;  
+      top:150px;
     height:80px;
   }
   .gameBackground{
@@ -903,8 +944,8 @@ right:20%;
     height:140px;
     position: relative;
 
-top:50px;
-  left:80px;
+    top:50px;
+    left:80px;
   }
   .planet6{
     opacity: 0;
@@ -925,7 +966,7 @@ top:50px;
   .liveContainer{
     top:70px;
     position: relative;
-left:20px;
+    left:20px;
   }
   .hearts2{
     width:20px;
@@ -934,3 +975,81 @@ left:20px;
     height:20px;
   }
     }
+
+
+
+
+
+
+
+
+
+.grey{
+  color:grey;
+}
+
+
+.orange{
+  color:orange;
+}
+
+.wordStyle{
+  float:left;
+  font-family:Roboto;
+}
+
+.space2{
+  float:left;
+  width:5px;
+  height:5px;
+}
+.paraP{
+  width:5px;
+  height:5px;
+  float:left;
+}
+  .paragraphBox{
+    padding:10px;
+    position:absolute;
+    top:2%;
+    left:15%;
+    width:60%;
+    height:500px;
+    background:transparent;
+  }
+  .posWord{
+    postion:absolute !important;
+    width:100%;
+  }
+  .ufoEContainer{
+    float:right !important;
+    margin-right:10% !important;
+    margin-top:25% !important;
+  }
+
+  .kkL{
+    float:left;
+    width:10px;
+    height:10px;
+    margin-top:10%;
+    border-bottom:2px solid yellow;
+  }
+  .kkM{
+    float:left;
+    width:10px;
+    height:10px;
+  }
+
+
+
+
+
+@media only screen and (min-width: 1380px) and (max-width: 1900px){
+
+.energy{
+  position: relative;
+  bottom:100px !important;
+  width:50px;
+}
+
+}

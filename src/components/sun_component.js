@@ -90,7 +90,7 @@ componentDidMount(){
       <audio id="com2" autoPlay>
         <source type="audio/mp3" src="images/orbit2.mp3"/>
       </audio>
-        <div className="paragraphBox" style={{border:"1px solid grey",padding:"40px",position:"absolute",top:"2%",left:"20%",width:"50%",height:"500px",background:"transparent"}}>
+        <div className="paragraphBox" >
           <ParagraphComponent paragraph = {this.state.paragraphs[0]} keys = {this.state.keys} />
         </div>
         <Timer time = {90} timeUp={this.timeUp}/>
